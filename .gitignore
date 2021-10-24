@@ -1,0 +1,14 @@
+## Dicsty Files
+src/profiles
+config.json
+json.sqlite
+src/events/guildMemberAdd.js
+
+## Visual Studio Code Files
+.vscode
+
+## Modules
+node_modules
+
+## Unused Files
+package-lock.json

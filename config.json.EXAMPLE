@@ -1,0 +1,6 @@
+{
+  "prefix": "PREFIX",
+  "auth": "DISCORD-BOT-TOKEN",
+  "topgg": "TOP-GG-TOKEN",
+  "shard": 1,
+}

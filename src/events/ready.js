@@ -1,5 +1,6 @@
 const chalk = require("chalk");
-const AutoPoster = require('topgg-autoposter');
+const { AutoPoster } = require('topgg-autoposter');
+const config = require('../../config.json')
 
 module.exports = async (client) => {
   const ap = AutoPoster(client.config.topgg, client)

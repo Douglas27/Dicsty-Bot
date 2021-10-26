@@ -13,14 +13,13 @@ module.exports = async (client) => {
     { name: `❓ | Utilize d.help`, type: 'PLAYING' },
     { name: `⚒️ | Minecraft`, type: 5 },
     { name: '🐦 | Me siga no Twitter: @DicstyBot', type: 'STREAMING', url: 'https://www.twitch.tv/jp_portoo' },
-    { name: '🧸 | Fui criada pelo: Jão#8854', type: 'LISTENING' },
-    { name: `🎨 | Desenho feito por: P&Fbaby#8216`, type: 'PLAYING' },
+    { name: '🧸 | Fui criada pelo: João P.#0001', type: 'LISTENING' },
     { name: `🎈 | Fui criada dia: 21 de Setembro de 2020`, type: 'PLAYING' },
-    { name: `🍒 | Achou algum bug? Reporte!`, type: 'PLAYING' },
+    { name: `🍒 | Leia meu About Me!`, type: 'PLAYING' },
     { name: '📧 | Vote em mim no top.gg!', type: 5 },
     { name: `🥰 | ${client.users.cache.size} usuários maravilhosos!`, type: 'WATCHING' },
     { name: `✨ | ${client.guilds.cache.size} lugares maravilhosos!`, type: `WATCHING` },
-    { name: '📡 | v3.8', type: 'PLAYING' },
+    { name: '📡 | v7.1', type: 'PLAYING' },
   ];
 
   setInterval(() => {

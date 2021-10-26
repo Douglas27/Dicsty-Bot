@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const convert = require("parse-ms");
 module.exports = {
     name: "spotify",
+    category: "fun",
     aliases: ['spotify', 'msc', 'sptf', 'música'],
     async run(client, message, args) {
     let user;

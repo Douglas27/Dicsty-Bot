@@ -2,7 +2,6 @@
 src/profiles
 config.json
 json.sqlite
-src/events/guildMemberAdd.js
 
 ## Visual Studio Code Files
 .vscode

@@ -4,6 +4,7 @@ moment.locale('pt-BR');
 
 module.exports = {
    name: "serverinfo",
+   category: "utils",
    aliases: ['serverinfo', 'infoserver'],
    async run(bot, message,
       args) {

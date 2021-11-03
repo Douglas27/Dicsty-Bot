@@ -2,6 +2,7 @@ const Discord = require("discord.js")
 
 module.exports = {
     name: "say",
+    category: "utils",
     aliases: ['say', 'falar'],
     async run(client, message, args) {
 

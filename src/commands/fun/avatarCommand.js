@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 
 module.exports = {
   name: "avatar",
+  category: "fun",
   aliases: ['avatar', 'avtr'],
   async run(bot, message, args) {
   let user = message.mentions.users.first() || message.author;

@@ -5,6 +5,7 @@ const neko = new nko();
 
 module.exports = {
   name: "hug",
+  category: "fun",
   aliases: ['hug', 'abraçar'],
   async run(client, message, args) {
 

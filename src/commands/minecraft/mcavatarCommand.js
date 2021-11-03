@@ -2,6 +2,7 @@ const Discord = require(`discord.js`);
 
 module.exports = {
   name: "mcavatar",
+  category: "mine",
   aliases: ['mchead', 'mcavatar'],
   async run(client, message, args) {
   if(message.mentions.roles.first() || message.content.includes("@") || message.content.includes("<"))

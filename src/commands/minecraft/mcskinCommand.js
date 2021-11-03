@@ -1,6 +1,7 @@
 const Discord = require(`discord.js`);
 module.exports = {
   name: "mcskin",
+  category: "mine",
   aliases: ['mcskin', 'mcbody'],
   async run(client, message, args) {
  let mesaj = args.slice(0).join(' ');

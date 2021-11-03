@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 
 module.exports = {
   name: "clear",
+  category: "mod",
   aliases: ['clear', 'limpar'],
   async run(client, message, args) {
 

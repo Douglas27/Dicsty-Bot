@@ -3,6 +3,7 @@ const ownerid = "549052058624458785";
 
 module.exports = {
   name: "serverlist",
+  category: "utils",
   aliases: ['serverlist', 'list'],
   async run(bot, message, args)  {
     if (message.author.id == ownerid) {

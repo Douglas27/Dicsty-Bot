@@ -2,6 +2,7 @@ const Discord = require('discord.js')
 
 module.exports = {
       name: "servericon",
+      category: "utils",
       aliases: ['servericon', 'srvricon'],
       async run(client, message, args) {
 

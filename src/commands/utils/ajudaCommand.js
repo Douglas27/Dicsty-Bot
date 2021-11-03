@@ -1,27 +1,134 @@
-const discord = require('discord.js')
+const Discord = require("discord.js");
+const config = require("../../../config.json");
+
 module.exports = {
-    name: "ajuda",
-    aliases: ['help', 'ajuda', 'ajd'],
-    async run(client, message, args) {
-        const { commands } = message.client;
-        const data = [];
+    name: 'ajuda',
+    category: "utils",
+    run: async (client, message, args) => {
+        
+    const { commands } = message.client;
+    const data = [];
 
-    let avatar = message.author.displayAvatarURL({dynamic: true, format: 'png' });
-    let user = message.author;
-    let gAvatar = message.guild.iconURL({ dynamic: true, format: "png", size: 1024 });
+    let avatar = client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 1024 });
+
+    if(!args.length) {
+    
+    const embed = new Discord.MessageEmbed()
+
+    .setAuthor(`${message.guild.name} - Ajuda`, client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 1024 }))
+    .setThumbnail(avatar)
+    .setDescription(`**🌵 » [Meu site](https://dicsty.tk)⠀|⠀🌏 » [Top.gg](https://top.gg/bot/757703647772540953)⠀|⠀🐦 » [Twitter](https://twitter.com/DicstyBot)**`)
+    .addField('⠀', '<a:0_:905198859783905290> - **Início**', true)
+    .addField('⠀', '<a:1_:823568695880056903> - **Moderação**', true)
+    .addField('⠀', '<a:2_:823568794995785728> - **Photoshop**', true)
+    .addField('⠀', '<a:3_:823568843435409419> - **Diversão**', true)
+    .addField('⠀', '<a:4_:823568903913472040> - **Minecraft**', true)
+    .addField('⠀', '<a:5_:823568959454314588> - **Economia e Social**', true)
+    .addField('⠀', '<a:6_:823569014780854284> - **Utilidade**', true)
+    .setColor('RED')
+    .setFooter('Dicsty ©', client.user.displayAvatarURL({ dynamic: true, size: 4096 }))
+
+    return message.dicstyReply(`${message.author}`, embed).then(msg => {
+        
+    msg.react('905198859783905290').then(r => {
+    msg.react('823568695880056903').then(r => {
+    msg.react('823568794995785728').then(r => {
+    msg.react('823568843435409419').then(r => {
+    msg.react('823568903913472040').then(r => {
+    msg.react('823568959454314588').then(r => {
+    msg.react('823569014780854284').then(r => {
+
+    const menuFilter = (reaction, user) => reaction.emoji.id === '905198859783905290' && user.id === message.author.id;
+    const modFilter = (reaction, user) => reaction.emoji.id === '823568695880056903' && user.id === message.author.id;
+    const imageFilter = (reaction, user) => reaction.emoji.id === '823568794995785728' && user.id === message.author.id;
+    const funFilter = (reaction, user) => reaction.emoji.id === '823568843435409419' && user.id === message.author.id;
+    const mineFilter = (reaction, user) => reaction.emoji.id === '823568903913472040' && user.id === message.author.id;
+    const socialFilter = (reaction, user) => reaction.emoji.id === '823568959454314588' && user.id === message.author.id;
+    const utilsFilter = (reaction, user) => reaction.emoji.id === '823569014780854284' && user.id === message.author.id;
+
+    const menu = msg.createReactionCollector(menuFilter);
+    const mod = msg.createReactionCollector(modFilter);
+    const image = msg.createReactionCollector(imageFilter);
+    const fun = msg.createReactionCollector(funFilter);
+    const mine = msg.createReactionCollector(mineFilter);
+    const social = msg.createReactionCollector(socialFilter);
+    const utils = msg.createReactionCollector(utilsFilter);
+
+    const embedmoderation = new Discord.MessageEmbed()
+
+    .setTitle(`Moderação - Total de comandos: \`${commands.filter(command => command.category == "mod").size}\``)
+    .setDescription(`• \`${commands.filter(command => command.category == "mod").map(command => command.name).join('\` **|** \`')}\`.`)
+    .setColor('RED')
+    .setTimestamp()
+    .setFooter('Dicsty ©', client.user.displayAvatarURL({ dynamic: true, size: 4096 }))
+
+    const embedutil = new Discord.MessageEmbed()
+
+    .setTitle(`Utilidade - Total de comandos: \`${commands.filter(command => command.category == "utils").size}\``)
+    .setDescription(`• \`${commands.filter(command => command.category == "utils").map(command => command.name).join('\` **|** \`')}\`.`)
+    .setColor('RED')
+    .setTimestamp()
+    .setFooter('Dicsty ©', client.user.displayAvatarURL({ dynamic: true, size: 4096 }))
+
+    const embedphotoshop = new Discord.MessageEmbed()
+
+    .setTitle(`Photoshop - Total de comandos: \`${commands.filter(command => command.category == "photoshop").size}\``)
+    .setDescription(`• \`${commands.filter(command => command.category == "photoshop").map(command => command.name).join('\` **|** \`')}\`.`)
+    .setColor('RED')
+    .setTimestamp()
+    .setFooter('Dicsty ©', client.user.displayAvatarURL({ dynamic: true, size: 4096 }))
+
+    const embedfun = new Discord.MessageEmbed()
+
+    .setTitle(`Diversão - Total de comandos: \`${commands.filter(command => command.category == "fun").size}\``)
+    .setDescription(`• \`${commands.filter(command => command.category == "fun").map(command => command.name).join('\` **|** \`')}\`.`)
+    .setColor('RED')
+    .setTimestamp()
+    .setFooter('Dicsty ©', client.user.displayAvatarURL({ dynamic: true, size: 4096 }))
 
 
-    const embed = new discord.MessageEmbed()
-.setTitle(`Olá ${message.author.username}, Seja Bem vindo ao menu de ajuda,\naqui você vê todos os meus comandos!`)
-.setDescription(`Comandos encontrados: **55**\nCategorias encontradas: **5**\n[**Me adicione**](https://discord.com/oauth2/authorize?client_id=757703647772540953&scope=bot&permissions=805686398) | [**Meu servidor de suporte**](https://discord.gg/td8xH6qsY3) | [**Vote em Mim!**](https://top.gg/bot/757703647772540953/vote/)`)
-.addField('<:field:823569883429077053>・Comandos de moderação - (8)', '`ban` | `kick` | `warn` | `tempmute` | `unmute`| `unlock` | `lock` | `clear`', false)
-.addField('<:potion:823570009825607680>・Comandos de Photoshop - (11)', '`clyde` | `tweet`| `perfect` | `stonks` | `minhanamorada` | `primeiraspalavras` | `beautiful` | `pintor` | `pride` | `rip` | `triggered`', false)
-.addField('<:fix:823569976019124254>・Comandos úteis - (17)', '`vote` | `userinfo` | `botinfo` | `serverinfo` | `servericon` | `help` | `ping` | `id` | `sistem` | `invite` | `donate` | `sugerir` | `reportbug` | `votação` | `anunciar` | `say` | `sorteio`', false)
-.addField('<:control:823569826634924075>・Comandos de diversão - (7)', 'aaaaa', false)
-.addField('<a:terrinha:825415569456627712> ・ Comandos Minecraft - (2)', '`mcskin` | `mcavatar`', false)
-.addField('<:money:825854999455727646> ・ Economia e Social - (10)', '`daily` | `work` | `cerejas` | `apostar` | `perfil` | `casar` | `wallpaper` | `divorciar` | `pay` | `rep`', false)
-.setImage("https://cdn.discordapp.com/attachments/801447863036543006/810887473738940416/Design_sem_nome_4.png")
-.setColor('RED')
-.setThumbnail(gAvatar)
-message.dicstyReply(embed)
-}}
+    const embedmine = new Discord.MessageEmbed()
+
+    .setTitle(`Minecraft - Total de comandos: \`${commands.filter(command => command.category == "mine").size}\``)
+    .setDescription(`• \`${commands.filter(command => command.category == "mine").map(command => command.name).join('\` **|** \`')}\`.`)
+    .setColor('RED')
+    .setTimestamp()
+    .setFooter('Dicsty ©', client.user.displayAvatarURL({ dynamic: true, size: 4096 }))
+
+    menu.on('collect', r2 => {
+        msg.edit(embed)
+    })
+
+    mod.on('collect', r2 => {
+        msg.edit(embedmoderation)
+    })
+
+    image.on('collect', r2 => {
+        msg.edit(embedphotoshop)
+    })
+
+    fun.on('collect', r2 => {
+        msg.edit(embedfun)
+    })
+
+    mine.on('collect', r2 => {
+        msg.edit(embedmine)
+    })
+
+    utils.on('collect', r2 => {
+        msg.edit(embedutil)
+    })
+
+    })
+    })
+    })
+    })
+    })
+    }
+
+    )}
+    )}
+    )}
+}
+}
+

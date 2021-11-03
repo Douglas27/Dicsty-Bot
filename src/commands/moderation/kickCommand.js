@@ -1,6 +1,7 @@
 const Discord = require("discord.js")
 module.exports = {
   name: "kick",
+  category: "mod",
   aliases: ['kick', 'expulsar'],
   async run(client, message, args) {
   message.delete()

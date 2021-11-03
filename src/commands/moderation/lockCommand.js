@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 
 module.exports = {
   name: "lock",
+  category: "mod",
   aliases: ['lock', 'fechar'],
   async run(client, message, args) {
   if (!message.member.hasPermission("MANAGE_CHANNELS")) return message.reply("<a:no:792088988785311754> | Você não tem a permissão `MANAGE_CHANNELS` para executar esse comando.");

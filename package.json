@@ -4,14 +4,18 @@
   "description": "",
   "main": "Main.js",
   "dependencies": {
+    "@top-gg/sdk": "^3.1.2",
     "canvas": "^2.8.0",
     "chalk": "^4.1.2",
     "discord.js": "^12.5.3",
+    "easytwitch": "^1.0.3",
+    "express": "^4.17.1",
     "jimp": "^0.16.1",
     "moment": "^2.29.1",
     "mongoose": "^6.0.12",
     "ms": "^2.1.3",
     "nekos.life": "^2.0.7",
+    "node-fetch": "^2.6.1",
     "parse-ms": "^2.1.0",
     "topgg-autoposter": "^2.0.0"
   },

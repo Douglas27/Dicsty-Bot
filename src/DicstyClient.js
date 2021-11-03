@@ -8,6 +8,7 @@ client.commands = new Collection();
 client.aliases = new Collection();
 client.config = require('../config.json')
 
+
 const commandFolders = client.fs.readdirSync('./src/commands');
 const eventFiles = client.fs.readdirSync('./src/events').filter((file) => file.endsWith('.js'));
 
@@ -18,6 +19,7 @@ for (const folder of commandFolders) {
     client.commands.set(command.name, command);
   }
 }
+
 
 for (const file of eventFiles) {
   const event = require(`./events/${file}`);

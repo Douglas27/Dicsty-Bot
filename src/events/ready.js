@@ -1,8 +1,20 @@
 const chalk = require("chalk");
+const Discord = require('discord.js')
+const { Client, Collection } = require("discord.js");
+const client = new Client();
 const { AutoPoster } = require('topgg-autoposter');
 const config = require('../../config.json')
 
 module.exports = async (client) => {
+
+  const embeed = new Discord.MessageEmbed()
+  .setTitle('<:online:905524915745218640> • Dicsty online!')
+  .setDescription('**Dicsty** está online novamente, e já está pronta para vocês a utilizarem! \nLembrando que qualquer erro você pode reportar para nossa equipe pelo canal <#901887680504274956>. ')
+  .setColor('RED')
+  
+  client.channels.cache.get("901887670463123516").send(embeed)
+
+
   const ap = AutoPoster(client.config.topgg, client)
 
   ap.on('posted', () => {

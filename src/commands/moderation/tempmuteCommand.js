@@ -2,6 +2,7 @@ const Discord = require("discord.js")
 const ms = require("ms")
 module.exports = {
   name: "tempmute",
+  category: "mod",
   aliases: ['mute', 'tempmute'],
   async run(client, message, args) {
   message.delete()
@@ -12,7 +13,7 @@ module.exports = {
     return message.reply("<a:no:792088988785311754> | Eu não tenho a permissão `MANAGE_MESSAGES`!")
   }
 
-  let role = message.guild.roles.cache.find(ch => ch.name === "🔇 | Dicsty Muted")
+  let role = message.guild.roles.cache.find(ch => ch.name === "🔇 | Dicsty Muted");
   if(!role) {
     try {
       message.channel.send('Estou criando o cargo...')
@@ -28,7 +29,7 @@ module.exports = {
           ADD_REACTIONS: false
       })
   });
-  message.channel.send('Cargo de mutados criado com sucesso! **Execute o comando novamente para funcionar corretamente!**')
+  message.channel.send('Cargo de mutados criado com sucesso! **Execute o comando novamente para funcionar corretamente!**');
   } catch (error) {
   console.log(error)
   }

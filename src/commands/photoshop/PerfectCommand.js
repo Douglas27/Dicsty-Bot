@@ -1,5 +1,6 @@
 module.exports = {
     name: "perfect",
+    category: "photoshop",
     aliases: ['perfect', 'perfeito'],
     async run(bot, message, args) {
 

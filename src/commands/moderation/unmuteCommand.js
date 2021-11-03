@@ -2,6 +2,7 @@ const Discord = require("discord.js")
 const ms = require("ms")
 module.exports = {
   name: "unmute",
+  category: "mod",
   aliases: ['unmute', 'desmutar'],
   async run(client, message, args) {
   message.delete()
@@ -9,10 +10,10 @@ module.exports = {
   if(!perms) return message.channel.send("<a:no:792088988785311754> | Você não tem a permissão `MANAGE_ROLES` para executar esse comando.")
 
   let role = message.guild.roles.cache.find(ch => ch.name === "🔇 | Dicsty Muted")
-  if(!role) return message.channel.send("Não Achei o Cargo 🔇 | Dicsty Muted")
+  if(!role) return message.channel.send("Não achei o cargo `🔇 | Dicsty Muted`")
 
   let user = message.mentions.members.first()
-  if(!user) return message.channel.send("Usuário Não informado!")
+  if(!user) return message.channel.send("Usuário não informado!")
 
 
 let embed1 = new Discord.MessageEmbed()

@@ -4,6 +4,7 @@ const os = require('os')
 
 module.exports = {
   name: 'eval',
+  category: "utils",
   aliases: ['eval', 'evaluate', 'e'],
   async run(client, message, args) {
     const clean = (text) => {

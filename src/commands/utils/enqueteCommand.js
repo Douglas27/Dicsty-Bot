@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 
 module.exports = {
   name: "votação",
+  category: "utils",
   aliases: ['votação', 'votacao', 'enquete'],
   async run(client, message, args) {
 message.delete()

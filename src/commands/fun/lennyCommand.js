@@ -1,6 +1,7 @@
 const Discord = require("discord.js")
 module.exports = {
   name: "lenny",
+  category: "fun",
   aliases: ['lenny', 'carinha'],
   async run(client, message, args) {
 let lennys = [

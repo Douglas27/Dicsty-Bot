@@ -1,6 +1,7 @@
 const Discord = require('discord.js')
 module.exports = {
   name: "anunciar",
+  category: "utils",
   aliases: ['anunciar', 'anuncio'],
   async run(client, message, argumentos, arg_texto, chat) {
   if (!message.member.hasPermission("MANAGE_CHANNELS")) return message.reply("<a:no:792088988785311754> | Você não tem a permissão `MANAGE_CHANNELS` para executar esse comando.");

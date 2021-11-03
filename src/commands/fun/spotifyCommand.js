@@ -35,8 +35,8 @@ module.exports = {
         let time = `${minutes}:${seconds}`;
 
         const embed = new Discord.MessageEmbed()
-        .setTitle("<:Spotify:787500125676240926> Música tocando agora!", "https://image.flaticon.com/icons/svg/2111/2111624.svg")
-        .setColor('RED')
+        .setTitle("<:Spotify:787500125676240926> Música tocando agora!", "https://cdn-icons-png.flaticon.com/512/174/174872.png")
+        .setColor('#1DB954')
         .setThumbnail(image)
         .addField("Nome:", name, true)
         .addField("Album:", album, true)

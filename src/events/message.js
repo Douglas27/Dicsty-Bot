@@ -5,20 +5,7 @@ module.exports = async (client, message) => {
 
     if (message.author.bot) return;
 
-    const embed = new MessageEmbed()
-      .setColor('RED')
-      .setAuthor(`🍒 | Me Mencionou?`)
-      .setTitle(`Minhas informações...`)
-      .setThumbnail('https://media.discordapp.net/attachments/764448917768896522/794694636991938600/unknown.png?width=480&height=480')
-      .addField('<:fix:823569976019124254> Meu prefixo:', '`d.`')
-      .addField('<:developer:823569744677830687> Developer:', '`Jão#8854`')
-      .addField('❓ Para obter ajuda utilize:', '`d.help`')
-      .addField('📨 Me adicione com :', '`d.invite`')
-      .addField('📢 Meu site:', `[dicsty.glitch.me](https://dicsty.glitch.me)`)
-      .setImage("https://cdn.discordapp.com/attachments/801447863036543006/810887473738940416/Design_sem_nome_4.png")
-      .addField('📮 Vote em mim em:', `[top.gg/bot/757703647772540953](https://top.gg/bot/757703647772540953)`)
-      .setFooter(`${message.guild.name} • © Todos os direitos reservados.`, message.guild.iconURL({ dynamic: true, format: "png", size: 1024 }))
-    message.dicstyReply(embed);
+    message.dicstyReply('<:DicstyFofisFeliz:832627298112110684> **|** Olá, eu me chamo Dicsty! Prazer em conhecer, e aproveitando... O meu prefixo é `d.`!');
   }
 
   if (message.author.bot || message.channel.type === "dm") return;

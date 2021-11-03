@@ -3,6 +3,7 @@ const fetch = require("node-fetch");
 
 module.exports = {
     name: "tweet",
+    category: "photoshop",
     aliases: ['tweet', 'tweetar'],
     async run(bot, message, args) {
 

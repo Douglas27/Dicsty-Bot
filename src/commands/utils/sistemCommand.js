@@ -1,8 +1,9 @@
-const MessageEmbed = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 const os = require('os');
 
 module.exports = {
     name: "sistem",
+    category: "utils",
     aliases: ['system', 'host', 'status'],
     async run(client, message, args) {
 
@@ -17,6 +18,9 @@ module.exports = {
 .addField('<:cloud:823569938622578729> **|** Host', ' SyncHosting <:SyncHosting_Dicsty:902298653681651732>', true)
 .setFooter('Dicsty © Todos os Direitos Reservados', avatar)
 .setThumbnail(avatar)
-message.channel.send(embed)
+message.channel.send(embed).catch((err) => {
+    console.log(err)
+
 //abc
-}}
+})
+    }}

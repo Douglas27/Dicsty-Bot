@@ -3,6 +3,7 @@ const jimp = require("jimp")
 
 module.exports = {
     name: "firstwords",
+    category: "photoshop",
     aliases: ['primeiraspalavras', 'firstwords'],
     async run(client, message, args) {
 

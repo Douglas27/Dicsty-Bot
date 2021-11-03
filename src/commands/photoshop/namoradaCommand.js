@@ -2,6 +2,7 @@ const Canvas = require('canvas');
 const Discord = require('discord.js');
 module.exports = {
     name: "namorada",
+    category: "photoshop",
     aliases: ['minhanamorada', 'namorada'],
     async run(client, message, args) {
 

@@ -4,6 +4,7 @@ let started_time_duration = ""
 let time_duration = ""
 module.exports = {
   name: "sorteio",
+  category: "utils",
   aliases: ['sorteio'],
   async run(client, message, args) {
     async function sorteio() {

@@ -1,6 +1,7 @@
 const { MessageEmbed } = require("discord.js")
 module.exports = {
     name: "id",
+    category: "utils",
     aliases: ['id'],
     async run(client, message, args) {
     let user = message.mentions.users.first() || message.author;
